@@ -1,9 +1,14 @@
 {
+  // Cloudflare Workers — OpenNext entry
+  // Deploy: npm run deploy
+  // Custom domain: Dashboard → Workers → vyltrum → Custom Domains → vyltrum.eu
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "vyltrum",
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-11-18",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "workers_dev": true,
+  "preview_urls": true,
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
