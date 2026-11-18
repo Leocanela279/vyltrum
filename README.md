@@ -49,14 +49,9 @@ You get a `*.workers.dev` URL immediately (`workers_dev` is on).
 1. Add the domain to Cloudflare DNS (or CNAME to Workers).
 2. Workers → **vyltrum** → **Settings** → **Domains & Routes** → **Custom Domains** → add `vyltrum.eu` (and `www` if needed).
 
-### GitHub Actions (already wired)
+### Cloudflare Workers Builds (recommended CI)
 
-Pushing to `main` runs [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml).  
-Set the two secrets above, then every push to `main` deploys.
-
-### Cloudflare Workers Builds (dashboard CI)
-
-If you prefer Cloudflare’s own Git integration instead of Actions:
+Connect this GitHub repo in the Cloudflare dashboard (Workers → Create → Connect to Git):
 
 | Setting | Value |
 | --- | --- |
@@ -64,6 +59,18 @@ If you prefer Cloudflare’s own Git integration instead of Actions:
 | Build command | `npx opennextjs-cloudflare build` |
 | Deploy command | `npx wrangler deploy` |
 | Node version | `22` |
+
+### GitHub Actions (optional)
+
+A ready workflow is in [`deploy.github-actions.yml`](./deploy.github-actions.yml). To enable it:
+
+```bash
+mkdir -p .github/workflows
+mv deploy.github-actions.yml .github/workflows/deploy.yml
+git add .github && git commit -m "Add Cloudflare Workers deploy workflow" && git push
+```
+
+Then add secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` in the repo settings.
 
 ## Scripts
 
