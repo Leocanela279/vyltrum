@@ -16,6 +16,14 @@ npm run dev
 # open http://localhost:3847/ad
 ```
 
+Export MP4 (1080×1080, ~5.5s):
+
+```bash
+npm run remotion:render
+# → out/vyltrum-ad.mp4
+# also served at /vyltrum-ad.mp4 when copied to public/
+```
+
 ## Local development
 
 ```bash

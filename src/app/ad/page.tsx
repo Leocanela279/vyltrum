@@ -36,6 +36,18 @@ export default function AdPage() {
         <div className="overflow-hidden border border-hairline/30 bg-mist/5">
           <VyltrumAdPlayer />
         </div>
+
+        <p className="text-[13px] text-steel">
+          Download MP4:{" "}
+          <a
+            href="/vyltrum-ad.mp4"
+            download="vyltrum-ad.mp4"
+            className="font-medium text-snow underline-offset-2 hover:underline"
+          >
+            vyltrum-ad.mp4
+          </a>{" "}
+          · 1080×1080 · 5.5s
+        </p>
       </div>
     </main>
   );
