@@ -4,8 +4,17 @@ Company site for **Vyltrum** (`vyltrum.eu`) — a European technology parent com
 
 ## Stack
 
-Next.js 16 (App Router) · TypeScript · Tailwind CSS · JetBrains Mono  
+Next.js 16 (App Router) · TypeScript · Tailwind CSS · JetBrains Mono · Remotion  
 **Hosting:** Cloudflare Workers via [`@opennextjs/cloudflare`](https://opennext.js.org/cloudflare)
+
+## Brand ad
+
+Square social ad at `/ad` — Node logo intro, [snapcn Hello Zoom](https://snapcn.dev/docs/text/hello-zoom) beat, logo end card. Source: `src/remotion/vyltrum-ad.tsx` (editable Remotion).
+
+```bash
+npm run dev
+# open http://localhost:3847/ad
+```
 
 ## Local development
 
